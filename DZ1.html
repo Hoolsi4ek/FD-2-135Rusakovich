@@ -9,15 +9,68 @@
 <body>
     <script>
 
-    const Surname =  (prompt("You Surname?"))
-    if(Иванов){
+    const Surname =  prompt("Ваша фамилия?")
+        if (Surname == "")
+        {
+            Surname ==="null"
+        }
       
-    }
+         else (prompt("Введите вашу фамилию корректно"))
+        {
+            
+        }
+        
 
-    else {
-        console.log("no")        
-    }
-    
+
+        const name =  prompt("Ваше имя?")
+        if (String(name) == ("")) 
+        {
+
+        }
+        else (prompt("Введите ваше имя корректно"))
+        {
+            Surname === ("null")
+        }
+        
+
+
+        const Middle_name =  prompt("Ваше Отчество?")
+        if (String(Middle_name) == ("")) 
+        {
+            
+        }
+        else (prompt("Введите ваше отчество корректно"))
+        {
+            Surname === ("null")
+        }
+        
+        
+        const age = prompt("Сколько вам лет?")
+         if (parseInt (age)) {
+            (age>1)
+         }
+
+         else (parseInt (age>1))
+         {
+            prompt("Возраст не может быть меньше 1 года")
+         }
+              
+         
+         const gender = prompt("ваш пол - мужской?")
+         if (alert("")){
+            let gender = "Мужской"
+         }
+         else {
+            let gender = "Женский"
+         }
+         
+         const result = `ваше ФИО: ${Surname} ${name} ${Middle_name}
+        ваш возраст в годах: ${age}
+        ваш возраст в днях: ${age * 365}
+        через 5 лет вам будет: ${age + 5}
+        ваш пол: ${gender}
+        `
+        alert (result)
     </script>
     
 </body>
