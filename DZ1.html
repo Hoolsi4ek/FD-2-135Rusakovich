@@ -10,38 +10,38 @@
     <script>
 
     const Surname =  prompt("Ваша фамилия?")
-        if (Surname == "")
+        if (Surname == String(Surname))
         {
-            Surname ==="null"
+            Surname ===String(Surname)
         }
       
-         else (prompt("Введите вашу фамилию корректно"))
+         else 
         {
-            
+            (prompt("Введите ваше имя корректно"))
         }
         
 
 
         const name =  prompt("Ваше имя?")
-        if (String(name) == ("")) 
+        if (String(name) == String (name)) 
         {
-
+            name === String("name")
         }
-        else (prompt("Введите ваше имя корректно"))
+        else 
         {
-            Surname === ("null")
+            (prompt("Введите ваше имя корректно"))
         }
         
 
 
         const Middle_name =  prompt("Ваше Отчество?")
-        if (String(Middle_name) == ("")) 
+        if (String(Middle_name) == String(Middle_name)) 
         {
-            
+            Middle_name === String("Middle_name")
         }
-        else (prompt("Введите ваше отчество корректно"))
+        else 
         {
-            Surname === ("null")
+            (prompt("Введите ваше отчество корректно"))
         }
         
         
@@ -50,18 +50,19 @@
             (age>1)
          }
 
-         else (parseInt (age>1))
+         else 
          {
             prompt("Возраст не может быть меньше 1 года")
          }
               
          
-         const gender = prompt("ваш пол - мужской?")
-         if (alert("")){
-            let gender = "Мужской"
+         const gender = confirm("ваш пол - мужской?")
+         if (String("Мужской"))
+         {
+            alert("Ваш пол мужской") 
          }
          else {
-            let gender = "Женский"
+             alert("Ваш пол женский")
          }
          
          const result = `ваше ФИО: ${Surname} ${name} ${Middle_name}
