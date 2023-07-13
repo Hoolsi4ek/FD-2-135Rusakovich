@@ -12,7 +12,7 @@
     const Surname =  prompt("Ваша фамилия?")
         if (Surname == String(Surname))
         {
-            Surname ===String(Surname)
+            (Surname === "")||(Surname === "null")
         }
       
          else 
@@ -25,7 +25,7 @@
         const name =  prompt("Ваше имя?")
         if (String(name) == String (name)) 
         {
-            name === String("name")
+            (name === "")
         }
         else 
         {
@@ -37,7 +37,7 @@
         const Middle_name =  prompt("Ваше Отчество?")
         if (String(Middle_name) == String(Middle_name)) 
         {
-            Middle_name === String("Middle_name")
+            (Middle_name === "")
         }
         else 
         {
@@ -47,7 +47,7 @@
         
         const age = prompt("Сколько вам лет?")
          if (parseInt (age)) {
-            (age>1)
+            (age>1),(age === "")
          }
 
          else 
@@ -59,16 +59,16 @@
          const gender = confirm("ваш пол - мужской?")
          if (String("Мужской"))
          {
-            alert("Ваш пол мужской") 
+             
          }
          else {
-             alert("Ваш пол женский")
+             gender=false
          }
          
          const result = `ваше ФИО: ${Surname} ${name} ${Middle_name}
         ваш возраст в годах: ${age}
         ваш возраст в днях: ${age * 365}
-        через 5 лет вам будет: ${age + 5}
+        через 5 лет вам будет: ${+age + 5}
         ваш пол: ${gender}
         `
         alert (result)
