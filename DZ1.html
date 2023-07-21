@@ -7,6 +7,72 @@
     <title>DZ11</title>
 </head>
 <body>
+    <script>
+
+    const Surname =  prompt("Ваша фамилия?")
+        if (Surname == String(Surname))
+        {
+            (Surname === "")||(Surname === "null")
+        }
+      
+         else 
+        {
+            (prompt("Введите ваше имя корректно"))
+        }
+        
+
+
+        const name =  prompt("Ваше имя?")
+        if (String(name) == String (name)) 
+        {
+            (name === "")
+        }
+        else 
+        {
+            (prompt("Введите ваше имя корректно"))
+        }
+        
+
+
+        const Middle_name =  prompt("Ваше Отчество?")
+        if (String(Middle_name) == String(Middle_name)) 
+        {
+            (Middle_name === "")
+        }
+        else 
+        {
+            (prompt("Введите ваше отчество корректно"))
+        }
+        
+        
+        const age = prompt("Сколько вам лет?")
+         if (parseInt (age)) {
+            (age>1),(age === "")
+         }
+
+         else 
+         {
+            prompt("Возраст не может быть меньше 1 года")
+         }
+              
+         
+         const gender = confirm("ваш пол - мужской?")
+         if (String("Мужской"))
+         {
+             
+         }
+         else {
+             gender=false
+         }
+         
+         const result = `ваше ФИО: ${Surname} ${name} ${Middle_name}
+        ваш возраст в годах: ${age}
+        ваш возраст в днях: ${age * 365}
+        через 5 лет вам будет: ${+age + 5}
+        ваш пол: ${gender}
+        `
+        alert (result)
+    </script>
     
 </body>
 </html>
