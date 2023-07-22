@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-
-        var name = prompt('Ваше имя?');
+        const lastname = prompt('Ваша фамилия?');
         while (true) {
-            if (name == '' || name === 'null' || !isNaN(parseInt(name))) {
-                name = prompt('Введите ваше имя корректно');
-                continue;
-            }
-            break;
-        }
-        var lastname = prompt('Ваша фамилия?');
-        while (true) {
-            if (lastname == '' || lastname === 'null' || !isNaN(parseInt(lastname))) {
+          if (lastname == '' || lastname === 'null' || !isNaN(parseInt(lastname))) {
                 lastname = prompt('Введите вашу фамилию корректно');
                 continue;
             }
             break;
         }
+        const name = prompt('Ваше имя?');
+        while (true) {
+            if (name == '' || name === 'null' || !isNaN(parseInt(name))) {
+                name = prompt('Введите вашу фамилию корректно');
+                continue;
+            }
+            break;
+        }
 
-        var surname = prompt('Ваше отчество?');
+        const surname = prompt('Ваше отчество?');
         while (true) {
             if (surname == '' || surname === 'null' || !isNaN(parseInt(surname))) {
                 surname = prompt('Введите ваше отчество корректно');
@@ -36,7 +32,7 @@
             }
             break;
         }
-        var age = parseInt(prompt('Ваш возраст?'));
+        const age = parseInt(prompt('Ваш возраст?'));
         while (true) {
             if (age === '' || age <= 0 || age === 'null' || isNaN(parseInt(age))) {
                 age = prompt('Введите ваш возраст корректно');
@@ -44,7 +40,7 @@
             }
             break;
         }
-        var gender = confirm('Ваш пол мужской?');
+        const gender = confirm('Ваш пол мужской?');
         if ((gender && age >= 63) || (!gender && age >= 58))
             pensioner_str = 'да';
         else
@@ -55,7 +51,7 @@
         else
             gender_str = 'женский';
 
-            var pens;
+            let pens;
         if (gender === 'женский') {
             if (age >= 58) { pens = 'Да' }
             else { pens = 'Нет' }
@@ -66,7 +62,7 @@
         };
 
 
-        var result = `ваше ФИО: ${name} ${lastname} ${surname}
+        const result = `ваше ФИО: ${lastname} ${name} ${surname}
         ваш возраст в годах: ${age}
         ваш возраст в днях: ${age * 365}
         через 5 лет вам будет: ${age + 5}
@@ -75,5 +71,6 @@
 
 
         alert(result)
-        </body>`   \
-    `       `   1`  q   qqqqqq1`1`      ``1111112222223333333333       </html>
+    </script>
+</body>
+</html>
