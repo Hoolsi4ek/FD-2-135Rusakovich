@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-</head>
-<body>
- <input type="button" value="1" onclick="getNumber(1)">
- <input type="button" value="2" onclick="getNumber(2)">
- <input type="button" value="3" onclick="getNumber(3)">
- <input type="button" value="4" onclick="getNumber(4)">
- <input type="button" value="5" onclick="getNumber(5)">
- <input type="button" value="6" onclick="getNumber(6)">
- <input type="button" value="7" onclick="getNumber(7)">
- <input type="button" value="8" onclick="getNumber(8)">
- <input type="button" value="9" onclick="getNumber(9)">
- <input type="button" value="0" onclick="getNumber(0)">
- 
- <input type="button" value="*" onclick="getSign('*')" >
- <input type="button" value="-" onclick="getSign('-')">
- <input type="button" value="+" onclick="getSign('+')">
- <input type="button" value="/" onclick="getSign('/')">
- 
- <input type="button" value="=" onclick="getResult()">
-</body>
-<script>
-let num1=null;
-let sign=null;
-let num2=null;
-function getSign(b) {
-    if (sign==null){
-        sign=b
-        console.log(b)
-    }
-    
-    
-}
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         input {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            margin-bottom: 8px;
+         }
 
-function getNumber(c) {
-    if (num2==null){
-        num2=c
-        console.log(c)
-    }
-    
-    
-}
+         input[value="0"] {
+            width: 109px;
+         }
+      </style>
+   </head>
+   <body>
+      <input type="button" value="1" onclick="getNumber(value)" />
+      <input type="button" value="2" onclick="getNumber(value)" />
+      <input type="button" value="3" onclick="getNumber(value)" />
+      <input type="button" value="+" onclick="getSign(value)" /><br />
+      <input type="button" value="4" onclick="getNumber(value)" />
+      <input type="button" value="5" onclick="getNumber(value)" />
+      <input type="button" value="6" onclick="getNumber(value)" />
+      <input type="button" value="-" onclick="getSign(value)" /><br />
+      <input type="button" value="7" onclick="getNumber(value)" />
+      <input type="button" value="8" onclick="getNumber(value)" />
+      <input type="button" value="9" onclick="getNumber(value)" />
+      <input type="button" value="*" onclick="getSign(value)" /><br />
+      <input type="button" value="0" onclick="getNumber(value)" />
+      <input type="button" value="=" onclick="calc(num1, num2, sign)"
+      />
+      <input type="button" value="/" onclick="getSign(value)" />
+      <script>
+         let num1 = null;
+         let num2 = null;
+         let sign = null;
 
-function getResult() {
-    if (result==){
-        result=
-        console.log()
-    }
-    
-    123
-}
-</script>
+         function getNumber(value) {
+            num1 === null ? (num1 = value) : (num2 = value);
+            console.log();
+         }
+
+         function getSign(value) {
+            sign = value;
+            console.log();
+         }
+
+         function reset() {
+            num1 = num2 = sign = null;
+         }
+
+         
+
+         function calc(num1, num2, sign) {
+            switch (sign) {
+               case "+":
+                  alert(+num1 + +num2);
+                  break;
+               case "-":
+                  alert(num1 - num2);
+                  break;
+               case "*":
+                  alert(num1 * num2);
+                  break;
+               case "/":
+                  alert(num1 / num2);
+                  break;
+            }
+            reset();
+         }
+      </script>
+   </body>
 </html>
