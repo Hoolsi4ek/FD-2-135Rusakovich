@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="-" onclick="CounterMinus()")>
+    <input type="button" value="+" onclick="CounterPlus()")> <br>
+    <input type="button" value="10" onclick="CounterPlus()")>
+    <input type="button" value="20" onclick="CounterPlus()")>
+    <input type="button" value="30" onclick="CounterPlus()")>
+    <input type="button" value="40" onclick="CounterPlus()")>
+    <input type="button" value="50" onclick="CounterPlus()")>
+    <script>
+
+        let counter=0;
+        
+
+        function CounterMinus() {
+            if(counter <= -10) {
+                return;
+            }
+           console.log(--counter);
+        }
+        
+
+
+
+        function CounterPlus() {
+            if(counter >= 10) {
+                return;
+            }
+           console.log(++counter);
+        }
+        
+        function CounterPlus() {
+            if(counter = -10) {
+                return;
+            }
+           console.log(--counter);
+        }
+    </script>
+    
+</body>
+</html>
