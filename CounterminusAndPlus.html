@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MinusAndPlus</title>
 </head>
 
 <body>
-    <input type="button" value="-" onclick="CounterMinus()")>
-    <input type="button" value="+" onclick="CounterPlus()")> <br>
-    <input type="button" value="10" onclick="CounterPlus()")>
-    <input type="button" value="20" onclick="CounterPlus()")>
-    <input type="button" value="30" onclick="CounterPlus()")>
-    <input type="button" value="40" onclick="CounterPlus()")>
-    <input type="button" value="50" onclick="CounterPlus()")>
+    <input type="button" value="-" onclick="CounterMinus()">
+    <input type="button" value="+" onclick="CounterPlus()"> <br>
+    <input type="button" value="10" onclick="CounterPlus1()">
+    <input type="button" value="20" onclick="CounterPlus1()">
+    <input type="button" value="30" onclick="CounterPlus1()">
+    <input type="button" value="40" onclick="CounterPlus1()">
+    <input type="button" value="50" onclick="CounterPlus1()">
     <script>
 
         let counter=0;
+        let counter1=0;
         
 
         function CounterMinus() {
@@ -37,12 +38,14 @@
            console.log(++counter);
         }
         
-        function CounterPlus() {
-            if(counter = -10) {
-                return;
+        function CounterPlus1() {
+            if(counter1 >= 300) {
+                return 
             }
-           console.log(--counter);
+           console.log(++counter1);
         }
+
+
     </script>
     
 </body>
