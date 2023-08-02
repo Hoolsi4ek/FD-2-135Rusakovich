@@ -14,13 +14,19 @@
         1, 8
       ];
 
-function treeSum(arr)  {
+function treeSum(array)  {
         let sum= 0;
-        for (let i=0; i<arr.length; i++){
-        sum+= treeSum(arr[i])};
-
+        for(let i=0;i<array.length;i++)
+        if(Array.isArray(array[i])){
+                sum+= treeSum(array[i]);
+            } else {
+                sum+= array[i];
+            }
+            return sum
         }
-        console.log(treeSum(array));
+        
+
+console.log(treeSum(array));
 
 
     </script>
