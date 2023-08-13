@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2+</title>
+</head>
+<body>
+    <script>
+    function removeSpaces(str) {
+  let start = 0;
+  let end = str.length - 1;
+
+  while (str[start] === " ") {
+    start++;
+  }
+
+  while (str[end] === " ") {
+    end--;
+  }
+
+  return str.slice(start, end + 1);
+}
+
+const user = prompt("Введите строку:");
+const result = "!" + removeSpaces(user) + "!";
+console.log(result);
+
+    </script>
+</body>
+</html>
