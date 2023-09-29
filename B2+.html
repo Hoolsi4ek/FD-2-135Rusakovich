@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseString(str) {
+  if (str === "") {
+    return "";
+  } else {
+    return reverseString(str.substr(1)) + str.charAt(0);
+  }
+}
+
+const input = prompt("Введите строку:");
+const reversed = reverseString(input);
+alert(Перевернутая строка: ${reversed});
+    </script>
+</body>
+</html>

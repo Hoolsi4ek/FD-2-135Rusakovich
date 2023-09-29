@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Drinks Storage</title>
+</head>
+<body>
+  <h1>Drinks Storage</h1>
+  <button onclick="addDrink()">Add Drink</button>
+  <button onclick="getDrink()">Get Drink Info</button>
+  <button onclick="deleteDrink()">Delete Drink</button>
+  <button onclick="getAllDrinks()">Get All Drinks</button>
+  <br><br>
+  <div id="result"></div>
+
+  <script>
+    function addDrink() {
+      let name = prompt("Enter drink name:");
+      let isAlcoholic = confirm("Is it an alcoholic drink?");
+      let recipe = prompt("Enter the recipe:");
+
+      drinkStorage.addValue(name, {alcoholic: isAlcoholic, recipe: recipe});
+
+      document.getElementById("result").innerHTML = Drink "${name}" has been added to the storage.;
+    }
+
+    
+    
+  </script>
+</body>
+</html>
